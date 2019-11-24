@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;;
+    background-position: center;
+    position: relative;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+}
+
+.main h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    display: inline-block;
+    font-size: 44px;
+    background: black;
+    opacity: .7;
+}
+
+span:before{
+    content: ' ';
+    animation: animate infinite 12s;
+}
+
+@keyframes animate{
+    0%{
+        content: 'Animations Wavy Background';
+        color: crimson;
+    }
+    35%{
+        content: 'Animations Wavy Background';
+        color: green;
+    }
+    65%{
+        content: 'Animations Wavy Background';
+        color: yellow;
+    }
+    100%{
+        content: 'Animations Wavy Background';
+        color: aqua;
+    }
+}
+
+.main .wave{
+    position: absolute;
+    height: 143px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: url(wave.png);
+    opacity: .7;
+    animation: animate-a 10s linear infinite;
+}
+
+
+
+.main .wave:before{
+    content: '';
+    position: absolute;
+    height: 143px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: url(wave.png);
+    opacity: .5;
+    animation: animate-reverse 10s linear infinite;
+
+}
+
+@keyframes animate-a{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1360px;
+        
+    }
+}
+
+@keyframes animate-reverse{
+    0%{
+        background-position: 1360px;
+    }
+    100%{
+        background-position: 0px;
+    }
+}
+
+
